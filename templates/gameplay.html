@@ -1,1 +1,35 @@
-<h1> Hello World </h1>
+{% extends "presets.html" %}
+
+{% block content %}
+<div class="fixed-bottom pb-4 d-flex justify-content-center">
+    <!-- wrapper that only grows as wide as the three buttons together -->
+    <div class="d-inline-flex gap-2">
+      <button class="btn btn-dark-green action-btn">
+        Bet
+      </button>
+  
+      <button class="btn btn-dark-green action-btn">
+        Check
+      </button>
+  
+      <button class="btn btn-dark-red action-btn">
+        Fold
+      </button>
+    </div>
+  </div>
+
+<div class="poker-table-container">
+    <div class="poker-table">
+      <!-- 8 Player Stat Boxes -->
+      <div class="player-box" style="bottom: -20%; left: 50%; transform: translate(-50%, 50%)">P1</div>
+      <div class="player-box" style="bottom: -5%; left: 5%; transform: translate(-50%, 50%)">P2</div>
+      <div class="player-box" style="top: 20%; left:-17%; transform: translate(-50%, 50%)">P3</div>
+      <div class="player-box" style="bottom: 105%; left: 5%; transform: translate(-50%, 50%)">P4</div>
+      <div class="player-box" style="bottom: 120%; left: 50%; transform: translate(-50%, 50%)">P5</div>
+      <div class="player-box" style="bottom: 105%; left: 95%; transform: translate(-50%, 50%)">P6</div>
+      <div class="player-box" style="bottom: 50%; left: 117%; transform: translate(-50%, 50%)">P7</div>
+      <div class="player-box" style="bottom: -5%; left: 95%; transform: translate(-50%, 50%)">P8</div>
+  </div>
+
+</div>
+{% endblock content %}
