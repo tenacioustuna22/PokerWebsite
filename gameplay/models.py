@@ -119,7 +119,7 @@ class Game(models.Model):
         related_name='games', 
         blank=True
     )
-
+    
     pot = models.FloatField(default=0.0)
     current_bet = models.FloatField(default=0.0)
     small_blind = models.FloatField(default=0.10)
@@ -127,6 +127,7 @@ class Game(models.Model):
      
     winner = models.ManyToManyField(Player, blank=True)
     winner_determined = models.BooleanField(default=False)
+    game_active = models.BooleanField(default=True)
 
     dealer_seat_index = models.PositiveIntegerField(default=0)
 

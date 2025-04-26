@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="mb-4" style="color: #e0d9ff">Active Games</h1>
+
+{% if games %}
+  <table class="table table-striped align-middle">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th># Players</th>
+        <th>Pot</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for game in games %}
+        <tr>
+          <td>{{ game.id }}</td>
+          <td>{{ game.players.count }}</td>
+          <td>${{ game.pot|floatformat:2 }}</td>
+          <td>
+            <a class="btn btn-primary btn-sm"
+               href="{% url 'gameplay' game.id %}">
+               Join
+            </a>
+          </td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% else %}
+  <p style="color: #e0d9ff">No active games right now. Start one and it will appear here</p>
+{% endif %}
+{% endblock %}

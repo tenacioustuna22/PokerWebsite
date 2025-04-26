@@ -48,8 +48,8 @@
     }
   
     .poker-table {
-        width: 600px;
-        height: 350px;
+        width: 750px;
+        height: 400px;
         background-color: #116530;
         border: 8px solid #5c4033;
         border-radius: 50% / 40%;
@@ -60,7 +60,7 @@
   
     .player-box {
         position: absolute;
-        width: 150px;
+        width: 200px;
         height: 100px;
         background-color: #444;
         color: white;
@@ -71,6 +71,13 @@
         border-radius: 8px;
         border: 1px solid #aaa;
     }
+
+    .player-name {
+        margin-top: -20px;
+        font-size: 1rem;
+
+    }
+
     .action-btn{
         display:flex;                
         justify-content:center;    
@@ -81,6 +88,26 @@
         flex:1 1 0;                
         min-width:0;               
     }
+
+    .custom-navbar{
+        background:#000f3a;
+        --bs-navbar-color:#e0d9ff;
+        --bs-navbar-hover-color:#ffffff;
+        --bs-navbar-active-color:#00ccff;
+        --bs-navbar-brand-color:#e0d9ff;
+        --bs-navbar-brand-hover-color:#ffffff;
+    }
+
+    .custom-navbar .dropdown-menu{
+        align-items: center;
+        --bs-dropdown-bg:#000f3a;            
+        --bs-dropdown-border-color:#000f3a;     
+        --bs-dropdown-link-color:#e0d9ff;    
+        --bs-dropdown-link-hover-color:#ffffff;
+        --bs-dropdown-link-hover-bg:#00164d;
+    }
+
+
 </style>
 </head>
 {% block navbar %}

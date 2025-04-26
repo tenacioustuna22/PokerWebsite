@@ -1,8 +1,9 @@
 from django.urls import path
-from .views import GameplayView
+from .views import GameplayView, LobbyView
 
 
 
 urlpatterns = [
-    path("", GameplayView.as_view(), name="gameplay"),
+    path("<int:game_id>/", GameplayView.as_view(), name="gameplay"),
+    path("lobby/", LobbyView.as_view(), name="lobby")
 ]

@@ -1,6 +1,7 @@
 {% extends "presets.html" %}
 
 {% block content %}
+<h2>Welcome, {{ request.user.username }}!</h2>
 <div class="fixed-bottom pb-4 d-flex justify-content-center">
     <!-- wrapper that only grows as wide as the three buttons together -->
     <div class="d-inline-flex gap-2">
@@ -30,6 +31,8 @@
       <div class="player-box" style="bottom: 50%; left: 117%; transform: translate(-50%, 50%)">P7</div>
       <div class="player-box" style="bottom: -5%; left: 95%; transform: translate(-50%, 50%)">P8</div>
   </div>
-
 </div>
+
+<
+
 {% endblock content %}
