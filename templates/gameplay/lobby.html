@@ -18,7 +18,6 @@
         <tr>
           <td>{{ game.id }}</td>
           <td>{{ game.players.count }}</td>
-          <td>${{ game.pot|floatformat:2 }}</td>
           <td>
             <a class="btn btn-primary btn-sm"
                href="{% url 'gameplay' game.id %}">

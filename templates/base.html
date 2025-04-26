@@ -19,16 +19,16 @@
           <ul class="navbar-nav flex-row gap-2">
             {% if user.is_authenticated %}
             <li class="nav-item">
-              <a class="nav-link fw-bold" href="{% url 'lobby' %}">Join Game</a>
+              <a class="nav-link fw-bold" href="{% url 'gameplay:lobby' %}">Join Game</a>
               {% endif %}
             </li>
             <li class="nav-item">
               <a class="nav-link fw-bold" href="{% url 'home' %}">Home</a>
             </li>
-            {% if user.is_authenticated %}
-            <li class="nav-item">
-              <a class="nav-link fw-bold" href="{% url 'home' %}">New game</a>
-              {% endif %}
+            <form method="post" action="{% url 'gameplay:new_game' %}" class="nav-item">
+              {% csrf_token %}
+              <button class="nav-link fw-bold" type="submit">Create Game</button>
+            </form>
             </li>
           </ul>
         </div>
@@ -67,9 +67,3 @@
       </div>
     </nav>  
 {% endblock navbar %}
-<main>
-    <div class="container">
-        {% block content %}
-        {% endblock content %}
-    </div>
-</main>

@@ -1,15 +1,13 @@
 {% extends "presets.html" %}
 
 {% block content %}
-<h2>Welcome, {{ request.user.username }}!</h2>
 <div class="fixed-bottom pb-4 d-flex justify-content-center">
-    <!-- wrapper that only grows as wide as the three buttons together -->
     <div class="d-inline-flex gap-2">
       <button class="btn btn-dark-green action-btn">
         Bet
       </button>
   
-      <button class="btn btn-dark-green action-btn">
+      <button class="btn btn-light-green action-btn">
         Check
       </button>
   
@@ -24,7 +22,7 @@
       <!-- 8 Player Stat Boxes -->
       <div class="player-box" style="bottom: -20%; left: 50%; transform: translate(-50%, 50%)">P1</div>
       <div class="player-box" style="bottom: -5%; left: 5%; transform: translate(-50%, 50%)">P2</div>
-      <div class="player-box" style="top: 20%; left:-17%; transform: translate(-50%, 50%)">P3</div>
+      <div class="player-box" style="bottom: 50%; left:-17%; transform: translate(-50%, 50%)">P3</div>
       <div class="player-box" style="bottom: 105%; left: 5%; transform: translate(-50%, 50%)">P4</div>
       <div class="player-box" style="bottom: 120%; left: 50%; transform: translate(-50%, 50%)">P5</div>
       <div class="player-box" style="bottom: 105%; left: 95%; transform: translate(-50%, 50%)">P6</div>
@@ -33,6 +31,5 @@
   </div>
 </div>
 
-<
 
 {% endblock content %}

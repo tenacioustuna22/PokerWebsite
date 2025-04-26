@@ -12,6 +12,11 @@
         color: white;
         border: 2px solid black;
     }
+    .btn-light-green {
+        background-color: #009100;
+        color: white;
+        border: 2px solid black;
+    }
 
     .btn-dark-green:hover {
         background-color: #004d00;
@@ -107,13 +112,18 @@
         --bs-dropdown-link-hover-bg:#00164d;
     }
 
-
+    
 </style>
 </head>
 {% block navbar %}
 {% endblock navbar %}
-{% block content %}
-{% endblock content%}
+
+<main>
+    <div class="container">
+        {% block content %}
+        {% endblock content %}
+    </div>
+</main>
 
   <!-- Bootstrap JavaScript Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
