@@ -1,3 +1,6 @@
+{% load static %}
+<!DOCTYPE html>
+
 <html>
 
 <head>
@@ -5,116 +8,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <style>
-    .btn-dark-green {
-        background-color: #006400; /* Dark green */
-        color: white;
-        border: 2px solid black;
-    }
-    .btn-light-green {
-        background-color: #009100;
-        color: white;
-        border: 2px solid black;
-    }
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+  integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link href="{% static 'css/base.css' %}" rel="stylesheet">
 
-    .btn-dark-green:hover {
-        background-color: #004d00;
-    }
-
-    .btn-dark-red {
-        background-color: #b90000; /* Dark red */
-        color: white;
-        border: 2px solid black;
-    }
-
-    .btn-dark-red:hover {
-        background-color: #600000;
-    }
-    html, body {
-        background-color: #222222;
-        margin: 0;
-        padding: 0;
-        height: 100%;
-    }
-  
-    html, body {
-        background-color: #2b2b2b;
-        margin: 0;
-        padding: 0;
-        height: 100%;
-    }
-  
-    .poker-table-container {
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-  
-    .poker-table {
-        width: 750px;
-        height: 400px;
-        background-color: #116530;
-        border: 8px solid #5c4033;
-        border-radius: 50% / 40%;
-        box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
-        position: relative;
-        transform:translateY(-7vh);
-    }
-  
-    .player-box {
-        position: absolute;
-        width: 200px;
-        height: 100px;
-        background-color: #444;
-        color: white;
-        font-size: 0.8rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 8px;
-        border: 1px solid #aaa;
-    }
-
-    .player-name {
-        margin-top: -20px;
-        font-size: 1rem;
-
-    }
-
-    .action-btn{
-        display:flex;                
-        justify-content:center;    
-        align-items:center;   
-        font-size:1.75rem;
-        padding:1rem 2rem;          
-        border:2px solid #000;
-        flex:1 1 0;                
-        min-width:0;               
-    }
-
-    .custom-navbar{
-        background:#000f3a;
-        --bs-navbar-color:#e0d9ff;
-        --bs-navbar-hover-color:#ffffff;
-        --bs-navbar-active-color:#00ccff;
-        --bs-navbar-brand-color:#e0d9ff;
-        --bs-navbar-brand-hover-color:#ffffff;
-    }
-
-    .custom-navbar .dropdown-menu{
-        align-items: center;
-        --bs-dropdown-bg:#000f3a;            
-        --bs-dropdown-border-color:#000f3a;     
-        --bs-dropdown-link-color:#e0d9ff;    
-        --bs-dropdown-link-hover-color:#ffffff;
-        --bs-dropdown-link-hover-bg:#00164d;
-    }
-
-    
-</style>
 </head>
+
+<body>
+    
 {% block navbar %}
 {% endblock navbar %}
 
@@ -127,5 +28,6 @@
 
   <!-- Bootstrap JavaScript Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="{% static 'js/deal.js' %}"></script>
 </body>
 </html>

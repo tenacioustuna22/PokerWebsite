@@ -7,7 +7,7 @@ class CustomUserCreationForm(UserCreationForm):
         fields = UserCreationForm.Meta.fields + (
             "username",
             "email",
-            "age",
+            "money",
         )
 
 
@@ -17,5 +17,5 @@ class CustomUserChangeForm(UserChangeForm):
         fields = (
             "username",
             "email",
-            "age",
+            "money",
         )

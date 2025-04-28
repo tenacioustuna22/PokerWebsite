@@ -450,7 +450,12 @@ class Game(models.Model):
 
     
     def start_new_round(self):
-        players = self.players_list()
+        deck, _ = Deck.objects.get_or_create(game=self)
+        self.deck.build_deck()
+        self.deck.deal_to_all_players()
+        
+        """
+                players = self.players_list()
         for p in players:
             p.is_folded = False
             p.is_all_in = False
@@ -469,6 +474,9 @@ class Game(models.Model):
         self.winner_determined = False
         self.use_blinds()
         self.save()
+        
+        """
+
 
 
 

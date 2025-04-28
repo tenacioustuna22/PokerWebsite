@@ -19,12 +19,15 @@
           <td>{{ game.id }}</td>
           <td>{{ game.players.count }}</td>
           <td>
-            <a class="btn btn-primary btn-sm"
-               href="{% url 'gameplay' game.id %}">
-               Join
-            </a>
-          </td>
+            {{ game.pot|floatformat:2}}</td>
+            <td>
+              <form method="post" action="{% url 'gameplay:join_game' game.id %}">
+                {% csrf_token %}
+                <button class="btn btn-primary"> Join Game</button>
+                </form>
+            </td>
         </tr>
+
       {% endfor %}
     </tbody>
   </table>
